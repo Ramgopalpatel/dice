@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dicee</title>
+    <style>
+      .container {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+      }
+
+      .dice {
+        text-align: center;
+        display: inline-block;
+      }
+
+      body {
+        background-color: purple;
+      }
+
+      h1 {
+        margin: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-shadow: 5px 0 #767f8b;
+        font-size: 8rem;
+        color: #50f5be;
+      }
+
+      p {
+        font-size: 2rem;
+        color: #2b8667;
+        font-family: cursive;
+      }
+
+      img {
+        width: 80%;
+        border-radius: 10px;
+      }
+      footer {
+        margin-top: 5%;
+        color: #eeeeee;
+        text-align: center;
+        font-family: "Indie Flower", cursive;
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Refresh to Play</h1>
+
+      <div class="dice">
+        <p>Player 1</p>
+        <img class="img1" id="image1" src="./d-image/dice6.png" />
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img class="img2" id="image2" src="./d-image/dice6.png" />
+      </div>
+    </div>
+
+    <script>
+      let random1 = Math.ceil(Math.random() * 6);
+      let random2 = Math.ceil(Math.random() * 6);
+
+      var randomsource1 = "./d-image/" + "dice" + random1 + ".png";
+      var randomsource2 = "./d-image/" + "dice" + random2 + ".png";
+      var image1 = document.querySelectorAll("img")[0];
+      var image2 = document.querySelectorAll("img")[1];
+      image1.setAttribute("src", randomsource1);
+      image2.setAttribute("src", randomsource2);
+
+      if (random1 == random2) {
+        document.querySelector("h1").innerHTML = "DRAW 📍📍";
+      } else if (random1 > random2) {
+        document.querySelector("h1").innerHTML = " Player 1 is Victor ✌";
+      } else {
+        document.querySelector("h1").innerHTML = "Player 2 is Victor ✌ ";
+      }
+    </script>
+  </body>
+
+  <footer>by Ramgopal Patel</footer>
+</html>
