@@ -23,12 +23,12 @@
         margin: 30px;
         font-family: Arial, Helvetica, sans-serif;
         text-shadow: 5px 0 #767f8b;
-        font-size: 8rem;
+        font-size: 4vmax;
         color: #50f5be;
       }
 
       p {
-        font-size: 2rem;
+        font-size: 1vmax;
         color: #2b8667;
         font-family: cursive;
       }
@@ -42,6 +42,13 @@
         color: #eeeeee;
         text-align: center;
         font-family: "Indie Flower", cursive;
+      }
+      #playBtn{
+        padding:5px 10px 5px 10px;
+        border-radius:5px;
+        background:yellow;
+        color:black;
+        font-weight:bolder;
       }
     </style>
     <link
@@ -86,7 +93,7 @@
   </body>
 
   <footer>
-    <button type="button" onClick="window.location.reload();">Play</button>
+    <button id="playBtn" type="button" onClick="window.location.reload();">Play</button>
     <h2>by Ramgopal Patel</h2>
   </footer>
 </html>
